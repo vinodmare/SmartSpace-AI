@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 210 40% 98%;
+  --foreground: 222 47% 11%;
+  --card: 0 0% 100%;
+  --card-foreground: 222 47% 11%;
+  --primary: 203 92% 35%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 168 66% 40%;
+  --secondary-foreground: 0 0% 100%;
+  --muted: 214 32% 91%;
+  --muted-foreground: 215 16% 38%;
+  --accent: 38 92% 50%;
+  --accent-foreground: 222 47% 11%;
+  --destructive: 0 72% 51%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 214 32% 88%;
+  --input: 214 32% 88%;
+  --ring: 203 92% 35%;
+}
+
+.dark {
+  --background: 222 47% 8%;
+  --foreground: 210 40% 98%;
+  --card: 222 38% 12%;
+  --card-foreground: 210 40% 98%;
+  --primary: 198 93% 60%;
+  --primary-foreground: 222 47% 8%;
+  --secondary: 166 84% 47%;
+  --secondary-foreground: 222 47% 8%;
+  --muted: 217 33% 18%;
+  --muted-foreground: 215 20% 70%;
+  --accent: 40 96% 56%;
+  --accent-foreground: 222 47% 8%;
+  --destructive: 0 91% 71%;
+  --destructive-foreground: 222 47% 8%;
+  --border: 217 33% 20%;
+  --input: 217 33% 20%;
+  --ring: 198 93% 60%;
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 16% 8%, rgba(45, 212, 191, 0.18), transparent 28rem),
+    radial-gradient(circle at 82% 0%, rgba(14, 165, 233, 0.18), transparent 30rem),
+    hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+::selection {
+  background: hsl(var(--primary) / 0.22);
+}
+
+.glass {
+  background: hsl(var(--card) / 0.72);
+  backdrop-filter: blur(20px);
+  border: 1px solid hsl(var(--border) / 0.72);
+}
+
+.focus-ring {
+  @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background;
+}

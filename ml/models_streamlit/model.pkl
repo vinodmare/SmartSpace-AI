@@ -1,0 +1,2 @@
+cd C:\Users\vinod\Documents\Codex\2026-07-14\you-are-a-senior-staff-software-2\ml
+streamlit run streamlit_app.py

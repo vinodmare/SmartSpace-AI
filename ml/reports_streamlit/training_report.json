@@ -1,0 +1,82 @@
+{
+  "dataset_rows_after_cleaning": 133346,
+  "dataset_columns_after_cleaning": [
+    "source_file",
+    "city",
+    "locality",
+    "property_type",
+    "furnishing",
+    "amenities",
+    "description",
+    "area",
+    "beds",
+    "bathrooms",
+    "balconies",
+    "target_price",
+    "target_type",
+    "log_area",
+    "amenity_count",
+    "description_length"
+  ],
+  "best_model": "Gradient Boosting",
+  "selection_reason": "Lowest validation RMSE after 5-fold cross-validation and holdout validation.",
+  "models": {
+    "Ridge Regression": {
+      "cv_mae": 1254932.5494984712,
+      "cv_rmse": 3091242.4688400617,
+      "cv_r2": 0.4622031735637984,
+      "train_cv_rmse": 3089738.832317771,
+      "validation": {
+        "mae": 1245668.763054632,
+        "rmse": 3066503.0848211255,
+        "r2": 0.45988080951843513
+      },
+      "test": {
+        "mae": 1273668.7184103453,
+        "rmse": 3144651.05245063,
+        "r2": 0.4595638906605949
+      },
+      "overfit_gap_rmse": 1503.6365222907625
+    },
+    "Random Forest": {
+      "cv_mae": 868400.8409105534,
+      "cv_rmse": 2697267.8346485686,
+      "cv_r2": 0.5905463012662404,
+      "train_cv_rmse": 2622115.807026089,
+      "validation": {
+        "mae": 859836.9196879768,
+        "rmse": 2672092.206228102,
+        "r2": 0.5898849783367048
+      },
+      "test": {
+        "mae": 864556.1932862516,
+        "rmse": 2713921.8256562264,
+        "r2": 0.5974738452363448
+      },
+      "overfit_gap_rmse": 75152.02762247948
+    },
+    "Gradient Boosting": {
+      "cv_mae": 871856.6599725155,
+      "cv_rmse": 2683417.885820542,
+      "cv_r2": 0.5947512253399275,
+      "train_cv_rmse": 2655744.8516076254,
+      "validation": {
+        "mae": 863225.2451835624,
+        "rmse": 2657419.78213645,
+        "r2": 0.5943764856490362
+      },
+      "test": {
+        "mae": 873954.1292024562,
+        "rmse": 2713798.993586952,
+        "r2": 0.5975102810696559
+      },
+      "overfit_gap_rmse": 27673.034212916624
+    }
+  },
+  "artifacts": {
+    "model": "C:\\Users\\vinod\\Desktop\\SmartSpaceAI_Full_Project\\ml\\models_streamlit\\model.pkl",
+    "preprocessing_pipeline": "C:\\Users\\vinod\\Desktop\\SmartSpaceAI_Full_Project\\ml\\models_streamlit\\preprocessing_pipeline.pkl",
+    "metadata": "C:\\Users\\vinod\\Desktop\\SmartSpaceAI_Full_Project\\ml\\models_streamlit\\training_metadata.pkl",
+    "explainability_plot": "C:\\Users\\vinod\\Desktop\\SmartSpaceAI_Full_Project\\ml\\reports_streamlit\\explainable_ai_permutation_importance.png"
+  }
+}

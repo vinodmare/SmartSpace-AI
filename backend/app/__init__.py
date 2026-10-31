@@ -1,0 +1,2 @@
+"""SmartSpace AI backend package."""
+
